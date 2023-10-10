@@ -1,0 +1,236 @@
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 0 2px black;
+  margin-top: 30px;
+
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #333;
+  margin: 10px auto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: seashell;
+  background-image: url("back1.png");
+}
+
+.sectors {
+  margin-left: 500px;
+  margin-top: 50px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.sectors:last-child {
+  margin-right: 50px;
+}
+
+.filters {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 70px;
+}
+
+.table-container {
+  margin-top: 50px;
+  width: 2212px;
+  alignment: center;
+  padding-left: 50px;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 550px;
+}
+
+.table {
+  width: 100%;
+  margin-left: 0px;
+  position: relative;
+}
+
+.table th,
+.table td {
+  border-radius: 4px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  background-image: url("back3.jpg");
+  position: relative;
+}
+
+.table th {
+  background-image: url("back3.jpg");
+  font-weight: bold;
+}
+
+.table tr {
+  position: relative;
+}
+
+.table tr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: saddlebrown;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.table tr:hover::before {
+  opacity: 0.4;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.select-label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+select {
+  background-color: wheat;
+  border-radius: 4px;
+  transform: scale(1.2);
+  margin-left: 40px;
+  box-shadow: 0 0 0 2px black;
+  width: 200px;
+  height: 40px;
+
+}
+
+.select-dropdown {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.select-option {
+  font-size: 16px;
+}
+
+a {
+  color: saddlebrown;
+  text-decoration-style: solid;
+}
+
+.text-box {
+  background-image: url("back3.jpg");
+  padding: 2px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("back3.jpg");
+}
+
+
+
+.square {
+  width: 10px;
+  height: 10px;
+  background-color: wheat;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  animation: squareAnimation 10s infinite;
+  padding: 50px;
+  margin-left: 100px;
+}
+
+.square::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  transform: rotate(45deg);
+  box-shadow: 2px 2px 2px black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.round-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: wheat; /* Цвет фона кнопки */
+  color: black; /* Цвет текста кнопки */
+  font-weight: bold;
+  box-shadow: 0 0 0 2px black;
+  cursor: pointer;
+  margin-left: 200px;
+}
+
+.round-button-main {
+  width: 300px;
+  height: 70px;
+  border-radius: 4px;
+  background-color: #d89e66; /* Цвет фона кнопки */
+  color: black; /* Цвет текста кнопки */
+  font-weight: bold;
+  box-shadow: 0 0 0 2px black;
+  cursor: pointer;
+  margin-left: 1002px;
+  font-size: 18px;
+}
+
+@keyframes squareAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
